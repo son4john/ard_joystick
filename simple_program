@@ -1,0 +1,25 @@
+const int sw_pin = 9;
+const int x_pin = 8;
+const int y_pin = 10;
+
+void setup() {
+  pinMode(sw_pin, INPUT);
+  digitalWrite(sw_pin, HIGH);
+  Serial.begin(115200);
+ // put your setup code here, to run once:
+}
+
+void loop() {
+  Serial.print("Switch: ");
+  Serial.print(digitalRead(sw_pin));
+  Serial.print("\n");
+  Serial.print("X-Axis: ");
+  Serial.print(analogRead(x_pin));
+  Serial.print("\n");
+  Serial.print("Y-Axis: ");
+  Serial.print(analogRead(y_pin));
+  Serial.print("\n\n");
+  delay(500);
+  // put your main code here, to run repeatedly:
+
+}
